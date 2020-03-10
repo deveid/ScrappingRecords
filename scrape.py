@@ -15,7 +15,7 @@ def ScrapeHDentalAssistanttData():
     port='5432'
     database_name='DENTALASSISTANT'
     username='postgres'
-    user_password='deveid'
+    user_password=''
     
     conn = psycopg2.connect(host=address, dbname=database_name,
                             port=port,
@@ -27,7 +27,7 @@ def ScrapeHDentalAssistanttData():
     
     #Using ChromeDriver establish connection with url
     url='http://ls.tsbde.texas.gov/ast-grid.php?_searchform=true&lic_nbr=&first_nme=&last_nme=&city=-1&st=-1&zip=&county=-1&disc_action=-1'
-    driver = webdriver.Chrome(executable_path='C:/Users/Byteworks/Downloads/chromedriver_win32/chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='chromedriver_win32/chromedriver.exe')
     driver.get(url)
     
     try:
